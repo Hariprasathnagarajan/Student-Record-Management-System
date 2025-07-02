@@ -28,5 +28,5 @@ A simple web-based application to manage student records with full **CRUD** (Cre
 
  **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/student-record-management.git
+   git clone https://github.com/Hariprasathnagarajan/Student-Record-Management-System
    cd student-record-management
