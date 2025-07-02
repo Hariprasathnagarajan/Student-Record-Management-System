@@ -1,0 +1,27 @@
+{
+  "name": "student-record-system",
+  "version": "1.0.0",
+  "description": "Student Record Management System with MongoDB",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "student",
+    "management",
+    "mongodb",
+    "express"
+  ],
+  "author": "Hariprasath Nagarajan",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^8.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}

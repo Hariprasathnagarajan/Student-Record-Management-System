@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Record Management System</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1><i class="fas fa-user-graduate"></i> Student Record Management System</h1>
+    </header>
+    
+    <main>
+      <section class="form-section">
+        <h2 id="form-title"><i class="fas fa-user-edit"></i> Student Form</h2>
+        <form id="studentForm">
+          <input type="hidden" id="studentId">
+          
+          <div class="form-group">
+            <label for="name"><i class="fas fa-user"></i> Name:</label>
+            <input type="text" id="name" placeholder="Enter student name" required>
+            <small class="error-message" id="name-error"></small>
+          </div>
+          
+          <div class="form-group">
+            <label for="email"><i class="fas fa-envelope"></i> Email:</label>
+            <input type="email" id="email" placeholder="Enter student email" required>
+            <small class="error-message" id="email-error"></small>
+          </div>
+          
+          <div class="form-group">
+            <label for="age"><i class="fas fa-birthday-cake"></i> Age:</label>
+            <input type="number" id="age" min="5" max="120" placeholder="Enter student age" required>
+            <small class="error-message" id="age-error"></small>
+          </div>
+          
+          <div class="form-group">
+            <label for="grade"><i class="fas fa-award"></i> Grade:</label>
+            <select id="grade" required>
+              <option value="">Select Grade</option>
+              <option value="A">A</option>
+              <option value="B">B</option>
+              <option value="C">C</option>
+              <option value="D">D</option>
+              <option value="F">F</option>
+            </select>
+            <small class="error-message" id="grade-error"></small>
+          </div>
+          
+          <div class="form-group">
+            <label for="enrollmentYear"><i class="fas fa-calendar-alt"></i> Enrollment Year:</label>
+            <input type="number" id="enrollmentYear" min="2000" placeholder="Enter enrollment year" required>
+            <small class="error-message" id="enrollmentYear-error"></small>
+          </div>
+          
+          <div class="form-actions">
+            <button type="submit" class="btn btn-save" id="saveBtn">
+              <i class="fas fa-save"></i> Save
+            </button>
+            <button type="button" class="btn btn-cancel" id="cancelBtn">
+              <i class="fas fa-times"></i> Cancel
+            </button>
+          </div>
+        </form>
+      </section>
+      
+      <section class="table-section">
+        <h2><i class="fas fa-table"></i> Student Records</h2>
+        <div class="search-container">
+          <input type="text" id="searchInput" placeholder="Search students...">
+          <button id="searchBtn" class="btn btn-search">
+            <i class="fas fa-search"></i> Search
+          </button>
+        </div>
+        <div class="table-responsive">
+          <table id="studentsTable">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>Grade</th>
+                <th>Enrollment Year</th>
+                <th>Enrollment Date</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="studentsTableBody">
+              
+            </tbody>
+          </table>
+        </div>
+        <div class="table-info" id="tableInfo">
+          Showing <span id="studentCount">0</span> students
+        </div>
+      </section>
+    </main>
+    
+    <footer>
+      <p>Student Record Management System &copy; 2024</p>
+    </footer>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
